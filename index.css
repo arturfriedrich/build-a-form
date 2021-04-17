@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+
+    background-image: linear-gradient(to bottom right, #ff53ce, #8df089);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+button {
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    padding: 1.5em 2.5em;
+    margin-bottom: 1em;
+
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 5px 5 px 5px grey;
+
+    text-align: inherit;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 700;
+
+    transform: scale(1);
+    transition: 250ms;
+}
+
+button {
+    background-color: #a34d8b;
+}
+
+button span {
+    color: #fff;
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+
+button:hover,
+button:focus {
+    animation: rotate 0.7s ease-in-out both;
+
+    background-color: #793967;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+button:hover span,
+button:focus span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+@media (min-width:800px) {
+    form {
+        flex-direction: row;
+    }
+
+    input,
+    button {
+        width: 100%;
+        margin: 0 1em;
+    }
+}
+
+.hidden {
+    background-color: #fff;
+    color: #6e6e6e;
+    border-radius: 30px;
+    padding: 1em;
+    width: 60%;
+    margin: 0 auto;
+}
