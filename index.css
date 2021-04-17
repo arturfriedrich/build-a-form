@@ -56,6 +56,7 @@ button span {
     color: #fff;
 }
 
+/* Input and button animations */
 input:focus {
     transform: scale(1.1);
 }
@@ -121,6 +122,8 @@ button:focus span {
     }
 }
 
+
+/* Hidden notification when te user clicks the Sign up button */
 .hidden {
     background-color: #fff;
     color: #6e6e6e;
